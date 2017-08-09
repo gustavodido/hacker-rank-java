@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-public class JavaStdinAndStdoutI {
+public class StdinAndStdoutI {
     public void readAndPrintThreeIntegers() {
         Scanner scanner = new Scanner(in);
 

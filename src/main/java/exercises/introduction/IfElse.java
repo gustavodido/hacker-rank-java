@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-public class JavaIfElse {
+public class IfElse {
     private static final String WEIRD = "Weird";
     private static final String NOT_WEIRD = "Not Weird";
 

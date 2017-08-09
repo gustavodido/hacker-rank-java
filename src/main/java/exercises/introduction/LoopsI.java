@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-public class JavaLoopsI {
+public class LoopsI {
     public void printMultiplesForInput() {
         Scanner scanner = new Scanner(in);
 

@@ -6,7 +6,7 @@ import static java.lang.String.format;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-public class JavaStdinAndStdoutII {
+public class StdinAndStdoutII {
     public void readAndPrintStringDoubleAndInteger() {
         Scanner scanner = new Scanner(in);
 

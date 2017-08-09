@@ -14,14 +14,14 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaIfElseTest {
+public class IfElseTest {
 
     private static final String WEIRD = "Weird\n";
     private static final String NOT_WEIRD = "Not Weird\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
-    private final JavaIfElse exercise = new JavaIfElse();
+    private final IfElse exercise = new IfElse();
 
     @Before
     public void setUp() {
