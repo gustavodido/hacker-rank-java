@@ -14,12 +14,12 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaStdinAndStdoutITest {
-
-    private static final String EXPECTED = "42\n100\n125\n";
+public class JavaStdinAndStdoutIITest {
+    private static final String INPUT = "42\n3.1415\nWelcome to HackerRank's Java tutorials!!\n";
+    private static final String OUTPUT = "String: Welcome to HackerRank's Java tutorials!!\nDouble: 3.1415\nInt: 42\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private final ByteArrayInputStream inContent = new ByteArrayInputStream(EXPECTED.getBytes());
+    private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
 
     @Before
     public void setUp() {
@@ -28,12 +28,12 @@ public class JavaStdinAndStdoutITest {
     }
 
     @Test
-    public void shouldReadAndPrintThreeIntegers()  {
-        JavaStdinAndStdoutI exercise = new JavaStdinAndStdoutI();
+    public void shouldReadAndPrintStringDoubleAndInteger()  {
+        JavaStdinAndStdoutII exercise = new JavaStdinAndStdoutII();
 
-        exercise.readAndPrintThreeIntegers();
+        exercise.readAndPrintStringDoubleAndInteger();
 
-        assertThat(outContent.toString()).isEqualTo(EXPECTED);
+        assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }
 
     @After
@@ -41,4 +41,5 @@ public class JavaStdinAndStdoutITest {
         setOut(out);
         setIn(in);
     }
+
 }
