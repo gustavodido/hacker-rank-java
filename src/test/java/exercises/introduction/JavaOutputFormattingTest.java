@@ -14,9 +14,15 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaStdinAndStdoutIITest {
-    private static final String INPUT = "42\n3.1415\nWelcome to HackerRank's Java tutorials!!\n";
-    private static final String OUTPUT = "String: Welcome to HackerRank's Java tutorials!!\nDouble: 3.1415\nInt: 42\n";
+public class JavaOutputFormattingTest {
+    private static final String INPUT = "java 100\ncpp 65\npython 50\n";
+
+    private static final String OUTPUT =
+            "================================\n" +
+            "java           100\n" +
+            "cpp            065\n" +
+            "python         050\n" +
+            "================================\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -28,10 +34,10 @@ public class JavaStdinAndStdoutIITest {
     }
 
     @Test
-    public void shouldReadAndPrintStringDoubleAndInteger()  {
-        JavaStdinAndStdoutII exercise = new JavaStdinAndStdoutII();
+    public void shouldReadAndPrintStringDoubleAndInteger() {
+        JavaOutputFormatting exercise = new JavaOutputFormatting();
 
-        exercise.readAndPrintStringDoubleAndInteger();
+        exercise.readFormatAndPrintTheInput();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }
@@ -41,4 +47,5 @@ public class JavaStdinAndStdoutIITest {
         setOut(out);
         setIn(in);
     }
+
 }
