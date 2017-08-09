@@ -6,11 +6,12 @@ import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.PrintStream;
 
 import static java.lang.System.in;
 import static java.lang.System.out;
+import static java.lang.System.setIn;
+import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JavaStdinAndStdoutITest {
@@ -22,24 +23,23 @@ public class JavaStdinAndStdoutITest {
 
     @Before
     public void setUp() {
-        System.setOut(new PrintStream(outContent));
-        System.setIn(inContent);
+        setOut(new PrintStream(outContent));
+        setIn(inContent);
     }
 
     @Test
-    public void shouldReadAndPrintThreeIntegers() throws IOException {
+    public void shouldReadAndPrintThreeIntegers()  {
         JavaStdinAndStdoutI exercise = new JavaStdinAndStdoutI();
 
         exercise.readAndPrintThreeIntegers();
 
-        outContent.close();
         assertThat(outContent.toString()).isEqualTo(EXPECTED);
     }
 
     @After
     public void tearDown() {
-        System.setOut(out);
-        System.setIn(in);
+        setOut(out);
+        setIn(in);
     }
 
 }
