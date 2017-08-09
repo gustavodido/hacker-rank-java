@@ -8,7 +8,7 @@ import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class LoopsII {
-    public void printSequenceNumber() {
+    public void printSeriesForInput() {
         Scanner scanner = new Scanner(in);
 
         int queries = scanner.nextInt();
