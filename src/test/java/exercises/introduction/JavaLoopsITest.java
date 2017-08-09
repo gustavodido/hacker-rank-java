@@ -14,15 +14,20 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaOutputFormattingTest {
-    private static final String INPUT = "java 100\ncpp 65\npython 50\n";
+public class JavaLoopsITest {
+    private static final String INPUT = "2";
 
     private static final String OUTPUT =
-            "================================\n" +
-                    "java           100\n" +
-                    "cpp            065\n" +
-                    "python         050\n" +
-                    "================================\n";
+            "2 x 1 = 2\n" +
+            "2 x 2 = 4\n" +
+            "2 x 3 = 6\n" +
+            "2 x 4 = 8\n" +
+            "2 x 5 = 10\n" +
+            "2 x 6 = 12\n" +
+            "2 x 7 = 14\n" +
+            "2 x 8 = 16\n" +
+            "2 x 9 = 18\n" +
+            "2 x 10 = 20\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -34,10 +39,10 @@ public class JavaOutputFormattingTest {
     }
 
     @Test
-    public void shouldReadAndPrintStringDoubleAndInteger() {
-        JavaOutputFormatting exercise = new JavaOutputFormatting();
+    public void shouldPrintMultiplesForInput() {
+        JavaLoopsI exercise = new JavaLoopsI();
 
-        exercise.readFormatAndPrintTheInput();
+        exercise.printMultiplesForInput();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }
