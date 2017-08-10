@@ -6,7 +6,7 @@ import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class StdinAndStdoutI {
-    public void readAndPrintThreeIntegers() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         out.println(scanner.nextInt());

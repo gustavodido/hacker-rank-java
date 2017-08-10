@@ -31,7 +31,7 @@ public class StdinAndStdoutIITest {
     public void shouldReadAndPrintStringDoubleAndInteger()  {
         StdinAndStdoutII exercise = new StdinAndStdoutII();
 
-        exercise.readAndPrintStringDoubleAndInteger();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }

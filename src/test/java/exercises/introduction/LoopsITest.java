@@ -42,7 +42,7 @@ public class LoopsITest {
     public void shouldPrintMultiplesForInput() {
         LoopsI exercise = new LoopsI();
 
-        exercise.printMultiplesForInput();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }

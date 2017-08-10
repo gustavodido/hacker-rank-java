@@ -37,7 +37,7 @@ public class LoopsIITest {
     public void shouldPrintMultiplesForInput() {
         LoopsII exercise = new LoopsII();
 
-        exercise.printSeriesForInput();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }

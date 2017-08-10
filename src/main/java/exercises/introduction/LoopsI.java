@@ -7,7 +7,7 @@ import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class LoopsI {
-    public void printMultiplesForInput() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         int giveNumber = scanner.nextInt();

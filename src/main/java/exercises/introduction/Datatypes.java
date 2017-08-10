@@ -9,7 +9,7 @@ import static java.lang.System.out;
 
 public class Datatypes {
 
-    public void printIntegerDataTypeToHoldValues() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         int queries = scanner.nextInt();

@@ -9,7 +9,7 @@ public class IfElse {
     private static final String WEIRD = "Weird";
     private static final String NOT_WEIRD = "Not Weird";
 
-    public void readAndPrintWeirdNotWeird() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         int number = scanner.nextInt();

@@ -36,7 +36,7 @@ public class EndOfFileTest {
     public void shouldPrintMultiplesForInput() {
         EndOfFile exercise = new EndOfFile();
 
-        exercise.readLinesAndPrintUntilEOF();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }

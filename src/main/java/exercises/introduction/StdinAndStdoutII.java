@@ -7,7 +7,7 @@ import static java.lang.System.in;
 import static java.lang.System.out;
 
 public class StdinAndStdoutII {
-    public void readAndPrintStringDoubleAndInteger() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         int integerInput = scanner.nextInt();

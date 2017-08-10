@@ -32,7 +32,7 @@ public class IfElseTest {
     public void shouldPrintWeirdIfNumberIsOdd()  {
         setIn(new ByteArrayInputStream("3".getBytes()));
 
-        exercise.readAndPrintWeirdNotWeird();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(WEIRD);
     }
@@ -41,7 +41,7 @@ public class IfElseTest {
     public void shouldPrintNotWeirdIfNumberIsEvenAndBetween2And5()  {
         setIn(new ByteArrayInputStream("2".getBytes()));
 
-        exercise.readAndPrintWeirdNotWeird();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(NOT_WEIRD);
     }
@@ -50,7 +50,7 @@ public class IfElseTest {
     public void shouldPrintWeirdIfNumberIsEvenAndBetween6And20()  {
         setIn(new ByteArrayInputStream("6".getBytes()));
 
-        exercise.readAndPrintWeirdNotWeird();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(WEIRD);
     }
@@ -59,7 +59,7 @@ public class IfElseTest {
     public void shouldPrintNotWeirdIfNumberIsGreaterThan20()  {
         setIn(new ByteArrayInputStream("22".getBytes()));
 
-        exercise.readAndPrintWeirdNotWeird();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(NOT_WEIRD);
     }

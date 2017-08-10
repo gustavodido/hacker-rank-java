@@ -7,7 +7,7 @@ import static java.lang.System.out;
 
 public class EndOfFile {
 
-    public void readLinesAndPrintUntilEOF() {
+    public void solve() {
         Scanner scanner = new Scanner(in);
 
         int currentLine = 1;

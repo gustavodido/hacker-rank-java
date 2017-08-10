@@ -31,7 +31,7 @@ public class StdinAndStdoutITest {
     public void shouldReadAndPrintThreeIntegers()  {
         StdinAndStdoutI exercise = new StdinAndStdoutI();
 
-        exercise.readAndPrintThreeIntegers();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(EXPECTED);
     }

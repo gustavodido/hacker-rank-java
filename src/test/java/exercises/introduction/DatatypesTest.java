@@ -55,7 +55,7 @@ public class DatatypesTest {
     public void shouldPrintMultiplesForInput() {
         Datatypes exercise = new Datatypes();
 
-        exercise.printIntegerDataTypeToHoldValues();
+        exercise.solve();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }
