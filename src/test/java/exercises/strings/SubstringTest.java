@@ -14,13 +14,11 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StringsIntroductionTest {
-    private static final String INPUT = "hello\n" +
-            "java";
+public class SubstringTest {
+    private static final String INPUT = "Helloworld\n" +
+            "3 7";
 
-    private static final String OUTPUT = "9\n" +
-            "No\n" +
-            "Hello Java\n";
+    private static final String OUTPUT = "lowo\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -33,7 +31,7 @@ public class StringsIntroductionTest {
 
     @Test
     public void shouldPrintMultiplesForInput() {
-        StringsIntroduction exercise = new StringsIntroduction();
+        Substring exercise = new Substring();
 
         exercise.solve();
 
