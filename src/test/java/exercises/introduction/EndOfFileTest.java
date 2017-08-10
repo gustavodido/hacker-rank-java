@@ -14,15 +14,14 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LoopsIITest {
-    private static final String INPUT =
-            "2\n" +
-            "0 2 10\n" +
-            "5 3 5\n";
+public class EndOfFileTest {
+    private static final String INPUT = "Hello world\n" +
+            "I am a file\n" +
+            "Read me until end-of-file.\n";
 
-    private static final String OUTPUT =
-            "2 6 14 30 62 126 254 510 1022 2046\n" +
-            "8 14 26 50 98\n";
+    private static final String OUTPUT = "1 Hello world\n" +
+            "2 I am a file\n" +
+            "3 Read me until end-of-file.\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -35,9 +34,9 @@ public class LoopsIITest {
 
     @Test
     public void shouldPrintMultiplesForInput() {
-        LoopsII exercise = new LoopsII();
+        EndOfFile exercise = new EndOfFile();
 
-        exercise.printSeriesForInput();
+        exercise.readLinesAndPrintUntilEOF();
 
         assertThat(outContent.toString()).isEqualTo(OUTPUT);
     }

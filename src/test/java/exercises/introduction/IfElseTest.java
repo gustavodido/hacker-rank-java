@@ -69,5 +69,4 @@ public class IfElseTest {
         setOut(out);
         setIn(in);
     }
-
 }
