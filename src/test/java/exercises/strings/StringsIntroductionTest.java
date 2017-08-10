@@ -1,4 +1,4 @@
-package exercises.introduction;
+package exercises.strings;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,13 +14,13 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CurrencyFormatterTest {
-    private static final String INPUT = "12324.134\n";
+public class StringsIntroductionTest {
+    private static final String INPUT = "hello\n" +
+            "java";
 
-    private static final String OUTPUT = "US: $12,324.13\n" +
-            "India: Rs.12,324.13\n" +
-            "China: ￥12,324.13\n" +
-            "France: 12 324,13 €\n";
+    private static final String OUTPUT = "9\n" +
+            "No\n" +
+            "Hello Java\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -33,7 +33,7 @@ public class CurrencyFormatterTest {
 
     @Test
     public void shouldPrintMultiplesForInput() {
-        CurrencyFormatter exercise = new CurrencyFormatter();
+        StringsIntroduction exercise = new StringsIntroduction();
 
         exercise.solve();
 
@@ -45,4 +45,5 @@ public class CurrencyFormatterTest {
         setOut(out);
         setIn(in);
     }
+
 }
