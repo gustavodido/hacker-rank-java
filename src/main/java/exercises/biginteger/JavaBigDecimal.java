@@ -17,7 +17,7 @@ public class JavaBigDecimal {
         }
         sc.close();
 
-        // End of given code
+        // Solution
 
         Arrays.sort(s, 0, n, (o1, o2) -> {
             BigDecimal b1 = new BigDecimal(o1);
