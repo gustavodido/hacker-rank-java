@@ -52,7 +52,7 @@ public class DatatypesTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         Datatypes exercise = new Datatypes();
 
         exercise.solve();

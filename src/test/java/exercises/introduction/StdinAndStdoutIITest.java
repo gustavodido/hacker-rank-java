@@ -28,7 +28,7 @@ public class StdinAndStdoutIITest {
     }
 
     @Test
-    public void shouldReadAndPrintStringDoubleAndInteger()  {
+    public void shouldSolveForFirstScenario()  {
         StdinAndStdoutII exercise = new StdinAndStdoutII();
 
         exercise.solve();

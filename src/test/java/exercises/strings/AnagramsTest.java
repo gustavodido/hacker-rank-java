@@ -28,7 +28,7 @@ public class AnagramsTest {
     }
 
     @Test
-    public void shouldResolveForFirstScenario() {
+    public void shouldSolveForFirstScenario() {
         String input = "anagram\n" +
                 "margana\n";
 
@@ -41,7 +41,7 @@ public class AnagramsTest {
     }
 
     @Test
-    public void shouldResolveForSecondScenario() {
+    public void shouldSolveForSecondScenario() {
         String input = "anagram\n" +
                 "marganaa\n";
 
@@ -54,7 +54,7 @@ public class AnagramsTest {
     }
 
     @Test
-    public void shouldResolveForThirdScenario() {
+    public void shouldSolveForThirdScenario() {
         String input = "hello\n" +
                 "Hello\n";
 

@@ -30,7 +30,7 @@ public class StringReverseTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         StringReverse exercise = new StringReverse();
 
         exercise.solve();

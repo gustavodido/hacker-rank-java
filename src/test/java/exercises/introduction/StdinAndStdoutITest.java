@@ -28,7 +28,7 @@ public class StdinAndStdoutITest {
     }
 
     @Test
-    public void shouldReadAndPrintThreeIntegers()  {
+    public void shouldSolveForFirstScenario()  {
         StdinAndStdoutI exercise = new StdinAndStdoutI();
 
         exercise.solve();

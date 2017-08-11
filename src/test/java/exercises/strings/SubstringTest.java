@@ -30,7 +30,7 @@ public class SubstringTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         Substring exercise = new Substring();
 
         exercise.solve();

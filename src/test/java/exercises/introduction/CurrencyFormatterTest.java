@@ -32,7 +32,7 @@ public class CurrencyFormatterTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         CurrencyFormatter exercise = new CurrencyFormatter();
 
         exercise.solve();

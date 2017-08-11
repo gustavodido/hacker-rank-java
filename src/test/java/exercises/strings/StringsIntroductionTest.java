@@ -32,7 +32,7 @@ public class StringsIntroductionTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         StringsIntroduction exercise = new StringsIntroduction();
 
         exercise.solve();

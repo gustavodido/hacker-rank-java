@@ -34,7 +34,7 @@ public class LoopsIITest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         LoopsII exercise = new LoopsII();
 
         exercise.solve();

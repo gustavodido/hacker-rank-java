@@ -28,7 +28,7 @@ public class IntToStringTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         IntToString exercise = new IntToString();
 
         exercise.solve();

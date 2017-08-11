@@ -33,7 +33,7 @@ public class EndOfFileTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         EndOfFile exercise = new EndOfFile();
 
         exercise.solve();

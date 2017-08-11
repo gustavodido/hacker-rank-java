@@ -28,7 +28,7 @@ public class DateAndTimeTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         DateAndTime exercise = new DateAndTime();
 
         exercise.solve();

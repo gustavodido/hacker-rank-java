@@ -31,7 +31,7 @@ public class SubstringComparisonsTest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         SubstringComparisons exercise = new SubstringComparisons();
 
         exercise.solve();

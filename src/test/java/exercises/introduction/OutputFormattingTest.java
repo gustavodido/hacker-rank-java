@@ -34,7 +34,7 @@ public class OutputFormattingTest {
     }
 
     @Test
-    public void shouldReadAndPrintStringDoubleAndInteger() {
+    public void shouldSolveForFirstScenario() {
         OutputFormatting exercise = new OutputFormatting();
 
         exercise.readFormatAndPrintTheInput();

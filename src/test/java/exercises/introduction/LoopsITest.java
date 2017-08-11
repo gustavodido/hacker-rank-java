@@ -39,7 +39,7 @@ public class LoopsITest {
     }
 
     @Test
-    public void shouldPrintMultiplesForInput() {
+    public void shouldSolveForFirstScenario() {
         LoopsI exercise = new LoopsI();
 
         exercise.solve();
