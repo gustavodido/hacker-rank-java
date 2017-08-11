@@ -15,6 +15,7 @@ public class Regex {
         }
     }
 
+    // This is really bad, but it is how hacker-rank expects the result.
     private class MyRegex {
         String pattern = "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
     }
