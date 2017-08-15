@@ -2,6 +2,7 @@ package exercises.datastructures;
 
 import java.util.Scanner;
 
+@SuppressWarnings("Duplicates")
 public class UnidimensionalArrayPartTwo {
 
     private static boolean isSolvable(int m, int[] arr, int i) {

@@ -15,6 +15,7 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@SuppressWarnings("Duplicates")
 public class UnidimensionalArrayPartTwoTest {
     private static final String INPUT = "5\n" +
             "5 3\n" +
