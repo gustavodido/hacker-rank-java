@@ -2,7 +2,6 @@ package exercises.datastructures;
 
 import java.util.Scanner;
 
-@SuppressWarnings("Duplicates")
 public class UnidimensionalArrayPartTwo {
 
     private static boolean isSolvable(int m, int[] arr, int i) {
@@ -13,7 +12,7 @@ public class UnidimensionalArrayPartTwo {
         return isSolvable(m, arr, i + 1) || isSolvable(m, arr, i - 1) || isSolvable(m, arr, i + m);
     }
 
-    public static boolean canWin(int leap, int[] game) {
+    private static boolean canWin(int leap, int[] game) {
         return isSolvable(leap, game, 0);
     }
 
