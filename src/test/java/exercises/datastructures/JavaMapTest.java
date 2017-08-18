@@ -28,7 +28,7 @@ public class JavaMapTest {
 
     private static final String OUTPUT = "uncle sam=99912222\n" +
             "Not found\n" +
-            "harry=1229993\n";
+            "harry=12299933\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
