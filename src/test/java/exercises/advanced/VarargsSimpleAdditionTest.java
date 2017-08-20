@@ -1,4 +1,4 @@
-package exercises.exceptionhandling;
+package exercises.advanced;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,18 +14,18 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ExceptionHandlingTest {
-    private static final String INPUT = "3 5\n" +
-            "2 4\n" +
-            "0 0\n" +
-            "-1 -2\n" +
-            "-1 3\n";
+public class VarargsSimpleAdditionTest {
+    private static final String INPUT = "1\n" +
+            "2\n" +
+            "3\n" +
+            "4\n" +
+            "5\n" +
+            "6\n";
 
-    private static final String OUTPUT = "243\n" +
-            "16\n" +
-            "java.lang.Exception: n and p should not be zero.\n" +
-            "java.lang.Exception: n or p should not be negative.\n" +
-            "java.lang.Exception: n or p should not be negative.\n";
+    private static final String OUTPUT = "1+2=3\n" +
+            "1+2+3=6\n" +
+            "1+2+3+4+5=15\n" +
+            "1+2+3+4+5+6=21\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -38,7 +38,7 @@ public class ExceptionHandlingTest {
 
     @Test
     public void shouldSolveForFirstScenario() {
-        ExceptionHandling exercise = new ExceptionHandling();
+        VarargsSimpleAddition exercise = new VarargsSimpleAddition();
 
         exercise.solve();
 
