@@ -26,6 +26,7 @@ public class JavaBitSet {
         Scanner in = new Scanner(System.in);
 
         int length = in.nextInt();
+        int operations = in.nextInt();
 
         BitSet[] bitSets = new BitSet[]{
                 new BitSet(length),
@@ -34,23 +35,16 @@ public class JavaBitSet {
 
         in.nextLine();
 
-        range(0, in.nextInt()).forEach(i -> {
+        range(0, operations).forEach(i -> {
             String operation = in.next();
 
             int set = in.nextInt() - 1;
             int param = in.nextInt();
 
-            switch (operation) {
-                case "AND":
-                case "OR":
-                case "XOR":
-                    BINARY_OPS.get(operation).accept(bitSets[set], bitSets[param -1]);
-                    break;
-
-                case "FLIP":
-                case "SET":
-                    SINGLE_OPS.get(operation).accept(bitSets[set], param);
-                    break;
+            if (BINARY_OPS.containsKey(operation)) {
+                BINARY_OPS.get(operation).accept(bitSets[set], bitSets[param - 1]);
+            } else if (SINGLE_OPS.containsKey(operation)) {
+                SINGLE_OPS.get(operation).accept(bitSets[set], param);
             }
 
             out.format("%s %s\n", bitSets[0].cardinality(), bitSets[1].cardinality());

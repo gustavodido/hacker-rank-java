@@ -72,8 +72,6 @@ public class UnidimensionalArrayPartTwoTest {
                 "YES\n" +
                 "NO\n";
 
-        setOut(new PrintStream(output));
-
         assertThat(outContent.toString()).isEqualTo(output);
     }
 
