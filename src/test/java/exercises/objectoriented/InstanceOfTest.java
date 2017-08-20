@@ -14,11 +14,15 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaInterfaceTest {
-    private static final String INPUT = "6\n";
+public class InstanceOfTest {
+    private static final String INPUT = "5\n" +
+            "Student\n" +
+            "Student\n" +
+            "Rockstar\n" +
+            "Student\n" +
+            "Hacker\n";
 
-    private static final String OUTPUT = "I implemented: exercises.objectoriented.JavaInterface$AdvancedArithmetic\n" +
-            "12\n";
+    private static final String OUTPUT = "3 1 1\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -31,7 +35,7 @@ public class JavaInterfaceTest {
 
     @Test
     public void shouldSolveForFirstScenario() {
-        JavaInterface exercise = new JavaInterface();
+        InstanceOf exercise = new InstanceOf();
 
         exercise.solve();
 
