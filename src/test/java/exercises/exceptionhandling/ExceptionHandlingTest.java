@@ -1,4 +1,4 @@
-package exercises.objectoriented;
+package exercises.exceptionhandling;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,15 +14,18 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class JavaIteratorTest {
-    private static final String INPUT = "2 2\n" +
-            "42\n" +
-            "10\n" +
-            "hello\n" +
-            "java\n";
+public class ExceptionHandlingTest {
+    private static final String INPUT = "3 5\n" +
+            "2 4\n" +
+            "0 0\n" +
+            "-1 -2\n" +
+            "-1 3\n";
 
-    private static final String OUTPUT = "hello\n" +
-            "java\n";
+    private static final String OUTPUT = "243\n" +
+            "16\n" +
+            "java.lang.Exception: n and p should not be zero.\n" +
+            "java.lang.Exception: n or p should not be negative.\n" +
+            "java.lang.Exception: n or p should not be negative.\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -35,7 +38,7 @@ public class JavaIteratorTest {
 
     @Test
     public void shouldSolveForFirstScenario() {
-        JavaIterator exercise = new JavaIterator();
+        ExceptionHandling exercise = new ExceptionHandling();
 
         exercise.solve();
 
@@ -47,4 +50,5 @@ public class JavaIteratorTest {
         setOut(out);
         setIn(in);
     }
+
 }
