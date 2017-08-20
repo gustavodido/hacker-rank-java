@@ -11,12 +11,12 @@ import static java.lang.System.out;
 
 public class PrimeChecker {
 
-     class Prime {
+     private class Prime {
 
-        public void checkPrime(int ... values) {
-            for (int i = 0; i < values.length; i++) {
-                if (isPrime(values[i])) {
-                    out.format("%s ", values[i]);
+        void checkPrime(int... values) {
+            for (int value : values) {
+                if (isPrime(value)) {
+                    out.format("%s ", value);
                 }
             }
             out.println();
@@ -55,19 +55,19 @@ public class PrimeChecker {
             Method[] methods = Prime.class.getDeclaredMethods();
             Set<String> set = new HashSet<>();
             boolean overload = false;
-            for (int i = 0; i < methods.length; i++) {
-                if (set.contains(methods[i].getName())) {
+            for (Method method : methods) {
+                if (set.contains(method.getName())) {
                     overload = true;
                     break;
                 }
-                set.add(methods[i].getName());
+                set.add(method.getName());
 
             }
             if (overload) {
                 throw new Exception("Overloading not allowed");
             }
         } catch (Exception e) {
-            System.out.println(e);
+            out.println(e);
         }
 
     }

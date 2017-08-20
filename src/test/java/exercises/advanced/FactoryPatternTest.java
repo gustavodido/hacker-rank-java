@@ -1,4 +1,4 @@
-package exercises.exceptionhandling;
+package exercises.advanced;
 
 import org.junit.After;
 import org.junit.Test;
@@ -13,36 +13,22 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ExceptionHandlingTryCatchTest {
+public class FactoryPatternTest {
 
     @Test
     public void shouldSolveForFirstScenario() {
-        final String input = "10\n3\n";
-        final String output = "3\n";
+        final String input = "cake\n";
+        final String output = "The factory returned class exercises.advanced.FactoryPattern$Cake\n" +
+                "Someone ordered a Dessert!\n";
 
         testExerciseFor(input, output);
     }
 
     @Test
     public void shouldSolveForSecondScenario() {
-        final String input = "10\nHello\n";
-        final String output = "java.util.InputMismatchException\n";
-
-        testExerciseFor(input, output);
-    }
-
-    @Test
-    public void shouldSolveForThirdScenario() {
-        final String input = "10\n0\n";
-        final String output = "java.lang.ArithmeticException: / by zero\n";
-
-        testExerciseFor(input, output);
-    }
-
-    @Test
-    public void shouldSolveForForthScenario() {
-        final String input = "23.323\n0\n";
-        final String output = "java.util.InputMismatchException\n";
+        final String input = "pizza\n";
+        final String output = "The factory returned class exercises.advanced.FactoryPattern$Pizza\n" +
+                "Someone ordered a Fast Food!\n";
 
         testExerciseFor(input, output);
     }
@@ -54,7 +40,7 @@ public class ExceptionHandlingTryCatchTest {
         setOut(new PrintStream(outContent));
         setIn(inContent);
 
-        ExceptionHandlingTryCatch exercise = new ExceptionHandlingTryCatch();
+        FactoryPattern exercise = new FactoryPattern();
 
         exercise.solve();
 
@@ -66,4 +52,5 @@ public class ExceptionHandlingTryCatchTest {
         setOut(out);
         setIn(in);
     }
+
 }
