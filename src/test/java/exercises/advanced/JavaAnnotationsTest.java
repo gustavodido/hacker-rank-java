@@ -14,17 +14,21 @@ import static java.lang.System.setIn;
 import static java.lang.System.setOut;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PrimeCheckerTest {
-    private static final String INPUT = "2\n" +
-            "1\n" +
-            "3\n" +
-            "4\n" +
-            "5\n";
+public class JavaAnnotationsTest {
+    private static final String INPUT = "3\n" +
+            "SENIOR 75\n" +
+            "JUNIOR 45\n" +
+            "SENIOR 40\n";
 
-    private static final String OUTPUT = "2 \n" +
-            "2 \n" +
-            "2 3 \n" +
-            "2 3 5 \n";
+    private static final String OUTPUT = "Senior Member\n" +
+            "Spend: 75\n" +
+            "Budget Left: 25\n" +
+            "Junior Member\n" +
+            "Spend: 45\n" +
+            "Budget Left: 5\n" +
+            "Senior Member\n" +
+            "Spend: 40\n" +
+            "Budget Left: 60\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayInputStream inContent = new ByteArrayInputStream(INPUT.getBytes());
@@ -37,7 +41,7 @@ public class PrimeCheckerTest {
 
     @Test
     public void shouldSolveForFirstScenario() {
-        PrimeChecker exercise = new PrimeChecker();
+        JavaAnnotations exercise = new JavaAnnotations();
 
         exercise.solve();
 
@@ -49,4 +53,5 @@ public class PrimeCheckerTest {
         setOut(out);
         setIn(in);
     }
+
 }
